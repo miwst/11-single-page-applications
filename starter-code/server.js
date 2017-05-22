@@ -6,7 +6,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 const app = express();
-const conString = 'postgres://postgres:dingodb@localhost:5432/kilovolt';
+const conString = 'postgres://postgres:1234@localhost:5432/postgres';
 // const conString = ''; // DONE TODO: Don't forget to set your own conString
 const client = new pg.Client(conString);
 client.connect();

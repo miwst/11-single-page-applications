@@ -6,8 +6,11 @@ var app = app || {};
   // DONE TODO: Setup a function that kicks off the fetching and rendering of articles, using the same
   // code that used to be in index.html.
   // Also be sure to hide all the main section elements, and reveal the #articles section:
-  app.Article.fetchAll();
-  app.articleView.initIndexPage();
+  articleController.init = function() {
+    $('.tab-content').hide();
+    $(`#articles`).fadeIn();
+    app.Article.fetchAll();
+  }
 
-  module.articleController = articleController;
+  module.articleController = articleController.init;
 })(app);
